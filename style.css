@@ -120,3 +120,21 @@ footer {
   background: #111827;
   color: #94a3b8;
 }
+.project-buttons {
+  margin-top: 12px;
+}
+
+.project-buttons .btn {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-right: 8px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.project-buttons .btn:hover {
+  background-color: #555;
+}
