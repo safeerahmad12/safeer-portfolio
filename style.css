@@ -138,3 +138,9 @@ footer {
 .project-buttons .btn:hover {
   background-color: #555;
 }
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
