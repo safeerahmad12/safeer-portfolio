@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background: #0f172a;
   color: #e2e8f0;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -23,6 +23,7 @@ html {
   background: #111827;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -72,15 +73,27 @@ html {
   color: #cbd5e1;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .btn {
   display: inline-block;
-  margin: 0 auto;
   padding: 12px 24px;
   background: #38bdf8;
   color: #0f172a;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #0ea5e9;
 }
 
 .section {
@@ -96,14 +109,14 @@ html {
 
 .section p {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto 20px;
   color: #cbd5e1;
 }
 
 .cards {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
 
@@ -112,6 +125,43 @@ html {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 14px;
+}
+
+.card p {
+  margin-bottom: 14px;
+  color: #cbd5e1;
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+.project-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-buttons .btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.project-buttons .btn:hover {
+  background-color: #0ea5e9;
 }
 
 footer {
@@ -120,27 +170,28 @@ footer {
   background: #111827;
   color: #94a3b8;
 }
-.project-buttons {
-  margin-top: 12px;
-}
 
-.project-buttons .btn {
-  display: inline-block;
-  padding: 8px 14px;
-  margin-right: 8px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 14px;
-}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
 
-.project-buttons .btn:hover {
-  background-color: #555;
-}
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 50px 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 34px;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
 }
